@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgueria Dev - A melhor Hamburgueria Dev</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    'xsmall': { 'max': '340px' },
+                    'sm': '640px',
+                    // => @media (min-width: 640px) { ... }
+
+                    'md': '768px',
+                    // => @media (min-width: 768px) { ... }
+
+                    'lg': '1024px',
+                    // => @media (min-width: 1024px) { ... }
+
+                    'xl': '1280px',
+                    // => @media (min-width: 1280px) { ... }
+
+                    '2xl': '1536px',
+                    // => @media (min-width: 1536px) { ... }
+                },
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header
+        class="bg-[url('./assets/bg.png')] h-[425px] bg.cover bg-center w-full flex items-center justify-center flex-col">
+
+        <figure>
+            <img src="assets/hamb-1.png" alt="Logo Hamburgueria Dev" class="rounded-full max-w-40 max-h-40 w-full">
+        </figure>
+
+        <h1 class="text-white font-bold text-xl sm:text-2xl">Hamburgueria Dev</h1>
+
+        <span class="text-white text-xs sm:text-base mt-1">Rua dev sucesso, 12, Campo Grande, MS</span>
+
+        <div class="bg-green-600 py-1 px-3 rounded-md mt-5">
+            <span class="font-bold text-white sm:text-base text-sm">Seg á Dom - 18:00 as 22:00</span>
+        </div>
+
+    </header>
+
+    <main>
+        <h2 class="my-5 text-center font-bold text-2xl md:text-3xl">Conheça nosso menu</h2>
+
+        <section>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 max-w-7xl mx-auto px-2 my-10">
+
+
+                <!--Product 1-->
+                <div class="flex gap-2 xsmall:flex-col flex-row">
+                    <figure>
+                        <img src="assets/hamb-1.png" alt="hamburg smash"
+                            class="max-w-28 xsmall:max-w-full rounded-md hover:scale-110 hover:-rotate-2">
+                    </figure>
+                    <div>
+                        <h3 class="font-bold">Hamburg Smash</h3>
+                        <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e
+                            maionese da casa
+                        </p>
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <span class="font-bold text-lg">R$ 18,90</span>
+
+                            <button data-name="Hamburg Smash" data-price="18.90" id="checkout-cart-btn"
+                                class="bg-gray-900 py-1 px-4 add-to-cart-btn">
+
+                                <img src="assets/icon-cart.svg" alt="icon de cart">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fim Product 1-->
+                <!--Product 2-->
+                <div class="flex gap-2 xsmall:flex-col flex-row">
+                    <figure>
+                        <img src="assets/hamb-2.png" alt="hamburg bacon"
+                            class="max-w-28 xsmall:max-w-full rounded-md hover:scale-110 hover:-rotate-2">
+                    </figure>
+                    <div>
+                        <h3 class="font-bold">hamburg bacon</h3>
+                        <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e
+                            maionese da casa
+                        </p>
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <span class="font-bold text-lg">R$ 32,90</span>
+
+                            <button data-name="hamburg bacon" data-price="32.90" id="checkout-cart-btn"
+                                class="bg-gray-900 py-1 px-4 add-to-cart-btn">
+
+                                <img src="assets/icon-cart.svg" alt="icon de cart">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fim Product 2-->
+                <!--Product 3-->
+                <div class="flex gap-2 xsmall:flex-col flex-row">
+                    <figure>
+                        <img src="assets/hamb-3.png" alt="Hamburg Duplo"
+                            class="max-w-28 xsmall:max-w-full rounded-md hover:scale-110 hover:-rotate-2">
+                    </figure>
+                    <div>
+                        <h3 class="font-bold">Hamburg Duplo</h3>
+                        <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e
+                            maionese da casa
+                        </p>
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <span class="font-bold text-lg">R$ 35,90</span>
+
+                            <button data-name="Hamburg Duplo" data-price="35.90" id="checkout-cart-btn"
+                                class="bg-gray-900 py-1 px-4 add-to-cart-btn">
+
+                                <img src="assets/icon-cart.svg" alt="icon de cart">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fim Product 3-->
+                <!--Product 4-->
+                <div class="flex gap-2 xsmall:flex-col flex-row">
+                    <figure>
+                        <img src="assets/hamb-4.png" alt="Hamburg Salada"
+                            class="max-w-28 xsmall:max-w-full rounded-md hover:scale-110 hover:-rotate-2">
+                    </figure>
+                    <div>
+                        <h3 class="font-bold">Hamburg Salada</h3>
+                        <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e
+                            maionese da casa
+                        </p>
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <span class="font-bold text-lg">R$ 30,00</span>
+
+                            <button data-name="Hamburg Salada" data-price="30" id="checkout-cart-btn"
+                                class="bg-gray-900 py-1 px-4 add-to-cart-btn">
+
+                                <img src="assets/icon-cart.svg" alt="icon de cart">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fim Product 4-->
+                <!--Product 5-->
+                <div class="flex gap-2 xsmall:flex-col flex-row">
+                    <figure>
+                        <img src="assets/hamb-5.png" alt="Cheese Burger"
+                            class="max-w-28 xsmall:max-w-full rounded-md hover:scale-110 hover:-rotate-2">
+                    </figure>
+                    <div>
+                        <h3 class="font-bold">Cheese Burger</h3>
+                        <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e
+                            maionese da casa
+                        </p>
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <span class="font-bold text-lg">R$ 25,00</span>
+
+                            <button data-name="Cheese Burger" data-price="25.00" id="checkout-cart-btn"
+                                class="bg-gray-900 py-1 px-4 add-to-cart-btn">
+
+                                <img src="assets/icon-cart.svg" alt="icon de cart">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fim Product 5-->
+                <!--Product 6-->
+                <div class="flex gap-2 xsmall:flex-col flex-row">
+                    <figure>
+                        <img src="assets/hamb-6.png" alt="hamburg x carne"
+                            class="max-w-28 xsmall:max-w-full rounded-md hover:scale-110 hover:-rotate-2">
+                    </figure>
+                    <div>
+                        <h3 class="font-bold">hamburg x carne</h3>
+                        <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e
+                            maionese da casa
+                        </p>
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <span class="font-bold text-lg">R$ 31,40</span>
+
+                            <button data-name="hamburg x carne" data-price="31.40" id="checkout-cart-btn"
+                                class="bg-gray-900 py-1 px-4 add-to-cart-btn">
+
+                                <img src="assets/icon-cart.svg" alt="icon de cart">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fim Product 6-->
+                <!--Product 7-->
+                <div class="flex gap-2 xsmall:flex-col flex-row">
+                    <figure>
+                        <img src="assets/hamb-7.png" alt="hamburg duplo Cheese"
+                            class="max-w-28 xsmall:max-w-full rounded-md hover:scale-110 hover:-rotate-2">
+                    </figure>
+                    <div>
+                        <h3 class="font-bold">hamburg duplo Cheese</h3>
+                        <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e
+                            maionese da casa
+                        </p>
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <span class="font-bold text-lg">R$ 41,50</span>
+
+                            <button data-name="hamburg duplo Cheese" data-price="41.50" id="checkout-cart-btn"
+                                class="bg-gray-900 py-1 px-4 add-to-cart-btn">
+
+                                <img src="assets/icon-cart.svg" alt="icon de cart">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fim Product 7-->
+                <!--Product 8-->
+                <div class="flex gap-2 xsmall:flex-col flex-row">
+                    <figure>
+                        <img src="assets/hamb-8.png" alt="hamburg x salada"
+                            class="max-w-28 xsmall:max-w-full rounded-md hover:scale-110 hover:-rotate-2">
+                    </figure>
+                    <div>
+                        <h3 class="font-bold">hamburg x salada</h3>
+                        <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e
+                            maionese da casa
+                        </p>
+
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <span class="font-bold text-lg">R$ 21,00</span>
+
+                            <button data-name="hamburg x salada" data-price="21.00" id="checkout-cart-btn"
+                                class="bg-gray-900 py-1 px-4 add-to-cart-btn">
+
+                                <img src="assets/icon-cart.svg" alt="icon de cart">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fim Product 8-->
+
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="my-10 text-center font-bold md:text-3xl text-2xl">Bebidas</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 md:gap-10 max-w-7xl mx-auto px-2 my-10">
+
+                <!--Bebida 1-->
+                <div class="flex gap-2 xsmall:flex-col flex-row w-full">
+                    <figure>
+                        <img src="assets/coca.png" alt="Coca Cola 350ml"
+                            class="max-w-28 xsmall:max-w-full rounded-md hover:scale-110 hover:-rotate-2">
+                    </figure>
+                    <div class="w-full">
+                        <h3 class="font-bold">Coca Cola 350ml</h3>
+
+                        <div class="flex items-center justify-between gap-2 mt-3 w-full">
+                            <span class="font-bold text-lg">R$ 6,00</span>
+
+                            <button data-name="hamburg x salada" data-price="6.00" id="checkout-cart-btn"
+                                class="bg-gray-900 py-1 px-4 add-to-cart-btn">
+
+                                <img src="assets/icon-cart.svg" alt="icon de cart">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fim Bebida 1-->
+                 <!--Bebida 1-->
+                 <div class="flex gap-2 xsmall:flex-col flex-row w-full">
+                    <figure>
+                        <img src="assets/guarana.png" alt="bebida guarana"
+                            class="max-w-28 xsmall:max-w-full rounded-md hover:scale-110 hover:-rotate-2">
+                    </figure>
+                    <div class="w-full">
+                        <h3 class="font-bold">Guaraná 350ml</h3>
+
+                        <div class="flex items-center justify-between gap-2 mt-3 w-full">
+                            <span class="font-bold text-lg">R$ 4,60</span>
+
+                            <button data-name="guarana" data-price="4.60" id="checkout-cart-btn"
+                                class="bg-gray-900 py-1 px-4 add-to-cart-btn">
+
+                                <img src="assets/icon-cart.svg" alt="icon de cart">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fim Bebida 1-->
+            </div>
+        </section>
+    </main>
+
+    <section class="min-h-screen w-full fixed top-0 left-0 bg-black/40 z-40 flex items-center justify-center">
+        <div class="md:w-[600px] w-11/12 bg-white sm:px-10 px-5 py-3 rounded-md">
+            <h2 class="text-2xl font-bold text-center md:text-3xl xsmall:text-xl mb-4">Seu carrinho</h2>
+
+            <div id="itens-cart" class="flex justify-between mb-2 flex-col"></div>
+
+            <p class="font-bold">Total: <span class="total-price">R$ 0,00</span></p>
+
+            <div class="flex flex-col mb-2">
+                <label for="adrees" class="font-bold text-base xsmall:text-sm ">Endereço de entrega:</label>
+                <input type="text" placeholder="Digite seu endereço completo..." id="adrees" class="w-full rounded-md my-1 py-2 p-1.5 border-2 xsmall:text-sm ">
+                <p class="text-red-600">Digite um endereço valido</p>
+            </div>
+            <div class="flex justify-between items-center w-full">
+                <button type="button" class="xsmall:text-sm " >Fechar</button>
+                <button type="button" class="bg-green-500 font-bold xsmall:text-sm text-white py-1 px-4 rounded-md">Finalizar pedido</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-red-500 py-2 fixed bottom-0 w-full z-10">
+        <button class="flex items-center justify-center mx-auto font-bold text-white gap-2">
+            ( <span id="cart-iten-count">2</span> ) Veja seu carrinho
+            <img src="assets/icon-cart.svg" alt="">
+        </button>
+    </footer>
+</body>
+
+</html>
